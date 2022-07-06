@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkblue;
+    padding: 0 10vw;
+}
+
+.navbar-brand {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li:hover {
+    background-color: limegreen;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 0rem .25rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navbar-button {
+    display: none;
+    height: 2.1rem;
+}
+
+.btn-line {
+    width: 2.1rem;
+    height: 0.3rem;
+    margin: 0.3rem 0rem;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.active{
+    display: flex;
+}
+
+@media all and (max-width: 559px) {
+    .navbar {
+        flex-direction: column;
+        padding: 0 .25rem;
+    }
+    .navbar-button {
+        display: block;
+    }
+    .navbar-top {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    nav {
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        width: 100vw;
+        text-align: center;
+    }
+}
+
+.clicked .line-1 {
+    transform: translateY(0.6rem) rotate(135deg);
+}
+
+.clicked .line-2 {
+    opacity: 0;
+}
+
+.clicked .line-3 {
+    transform: translateY(-0.6rem) rotate(-135deg);
+}
